@@ -1,0 +1,10 @@
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.1.0/linux_amd64/terraform-provider-azurerm_v4.1.0_x5
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.1.0/linux_amd64/LICENSE.txt
+.terraform/modules/modules.json
+.terraform/terraform.tfstate
+.terraform/environment
+.terraform.lock.hcl
+.terraform*
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfstate.1738436847.backup
