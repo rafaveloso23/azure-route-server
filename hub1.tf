@@ -158,9 +158,9 @@ resource "azurerm_bastion_host" "example" {
 resource "azurerm_network_interface" "nva" {
   count = 1
 
-  name                 = "vm-nva-${count.index}-nic"
-  location             = azurerm_resource_group.rg_hub_data.location
-  resource_group_name  = azurerm_resource_group.rg_hub_data.name
+  name                  = "vm-nva-${count.index}-nic"
+  location              = azurerm_resource_group.rg_hub_data.location
+  resource_group_name   = azurerm_resource_group.rg_hub_data.name
   ip_forwarding_enabled = true
 
 
