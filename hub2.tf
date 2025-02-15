@@ -161,7 +161,7 @@ resource "azurerm_network_interface" "nva2" {
   name                 = "vm-nva-${count.index}-nic"
   location             = azurerm_resource_group.rg_hub_data2.location
   resource_group_name  = azurerm_resource_group.rg_hub_data2.name
-  enable_ip_forwarding = true
+  ip_forwarding_enabled = true
 
   ip_configuration {
     name                          = "internal"
@@ -186,7 +186,7 @@ resource "azurerm_linux_virtual_machine" "vm_nva2" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = file("~/.ssh/id_ed25519.pub")
   }
 
   os_disk {
@@ -233,7 +233,7 @@ resource "azurerm_linux_virtual_machine" "vm_teste2" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = file("~/.ssh/id_ed25519.pub")
   }
 
   os_disk {
